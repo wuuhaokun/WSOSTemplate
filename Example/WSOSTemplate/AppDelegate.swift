@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        let dependenciesItemArray:[AppDependenciesItem]  = [AppDependenciesItem(classMainName: "WSHome", tabTitle: "ViewControler", tabImageName: "home1", tabSelectedImage: "home",tabBarViewClass:"ccc"),AppDependenciesItem(classMainName: "WSTableView", tabTitle: "TableView", tabImageName: "home", tabSelectedImage: "home",tabBarViewClass:"ccc")]
+        let dependenciesItemArray:[AppDependenciesItem]  = [AppDependenciesItem(classMainName: "WSHome", tabTitle: "ViewControler", tabImageName: "home", tabSelectedImage: "home",tabBarViewClass:"ccc"),AppDependenciesItem(classMainName: "WSTableView", tabTitle: "TableView", tabImageName: "home", tabSelectedImage: "home",tabBarViewClass:"ccc")]
         WSBaseShareFunction.createTabBarStyle(self.window!, dependenciesItemArray)
         
         return true
