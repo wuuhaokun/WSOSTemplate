@@ -1,0 +1,11 @@
+platform :ios, '11.0'
+use_frameworks!
+
+target 'WSOSTemplate_Example' do
+  pod 'WSOSTemplate', :path => '../'
+
+  target 'WSOSTemplate_Tests' do
+    inherit! :search_paths
+  end
+  
+end
