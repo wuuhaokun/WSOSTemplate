@@ -1,5 +1,5 @@
 import XCTest
-import WSOSTemplate
+import Pods_WSOSTemplate_Example
 
 class Tests: XCTestCase {
     

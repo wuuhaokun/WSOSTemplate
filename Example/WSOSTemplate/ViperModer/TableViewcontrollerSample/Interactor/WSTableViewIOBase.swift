@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import WSOSTemplate
+import Pods_WSOSTemplate_Example
 
 public protocol WSTableViewInteractorInput:  WSInteractorInputBase {
     

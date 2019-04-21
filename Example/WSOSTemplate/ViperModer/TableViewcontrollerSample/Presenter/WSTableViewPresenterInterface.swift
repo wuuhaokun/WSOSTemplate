@@ -7,7 +7,8 @@
 //
 
 import UIKit
-import WSOSTemplate
+
+import Pods_WSOSTemplate_Example
 
 public protocol WSTableViewPresenterInterface : WSPresenterInterfaceBase {
     
