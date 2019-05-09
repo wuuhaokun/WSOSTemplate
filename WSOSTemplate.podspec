@@ -45,7 +45,7 @@ TODO: Add long description of the pod here.
   s.dependency 'MJRefresh'
   s.dependency 'Toast-Swift'
   s.dependency 'SwiftyJSON'
-  s.dependency 'Cache'
+  s.dependency 'Cache', '~> 5.2.0'
   s.dependency 'Alamofire'
   s.dependency 'ObjectMapper'
   s.dependency 'MBProgressHUD'
