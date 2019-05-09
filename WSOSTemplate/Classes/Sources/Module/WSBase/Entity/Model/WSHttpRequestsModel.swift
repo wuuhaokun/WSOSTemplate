@@ -3,7 +3,7 @@
 //  shareba_business
 //
 //  Created by 吳招坤 on 2018/7/2.
-//  Copyright © 2018年 TSAI CHENG HENG. All rights reserved.
+//  Copyright © 2018年 WU CHAO KUN All rights reserved.
 //
 
 //import UIKit
@@ -78,3 +78,25 @@ open class WSFormDataModel: WSModelBase {
     
 }
 
+//"{\n  \"ReturnDate\" : \"2019\\/04\\/25 17:50:01\",\n  \"ReturnMessage\" : \"無資料可查詢\",\n  \"ReturnCode\" : 1\n}"
+//open class CPHttpRequestsModel: WSModelBase {
+//
+//    open var status: Bool?
+//    open var httpStatus: Int?
+//    open var data:Any?
+//    open var error:String?
+//
+//    required public init?(map: Map) {
+//        super.init(map: map)
+//    }
+//
+//    // Mappable
+//    override open func mapping(map: Map) {
+//        super.mapping(map: map)
+//        status      <- map["ReturnDate"]
+//        httpStatus  <- map["ReturnMessage"]
+//        data        <- map["data"]
+//        error       <- map["error"]
+//    }
+//
+//}

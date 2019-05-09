@@ -3,7 +3,7 @@
 //  shareba_business
 //
 //  Created by 吳招坤 on 2018/7/2.
-//  Copyright © 2018年 TSAI CHENG HENG. All rights reserved.
+//  Copyright © 2018年 WU CHAO KUN All rights reserved.
 //
 
 import Foundation
@@ -22,31 +22,32 @@ open class WSDataManagerBase : NSObject , WSDataManagerDelegateBase {
         entitiesData([],SBErrorType.ConnectError)
     }
     
-    open func loadApiCacheData(_ entitiesData: (([Any],SBErrorType) -> Void)!) {
+    open func loadApiCacheData(_ entitiesData: (([Any], SBErrorType) -> Void)!) {
         entitiesData([],SBErrorType.ConnectError)
     }
     
-    open func loadApiRequestsMoreData(_ entitiesData: (([Any],SBErrorType) -> Void)!, _ parameter:Any? = nil) {
+    open func loadApiRequestsMoreData(_ entitiesData: (([Any], SBErrorType) -> Void)!, _ parameter:Any? = nil) {
         //entitiesData([],SBErrorType.ConnectError)
     }
 
-    public func handleEmptyData(_ entitiesData: (([Any],SBErrorType) -> Void)!) {
-        let emptyDict = [["prefixCell":"WSEmpty","prefixModel":"WSEmpty","content":"no_information"]]
-        let moreDataArray:[WSEmptyModel] = Mapper<WSEmptyModel>().mapArray(JSONArray: (emptyDict) as Array)
-        var entitySections: [[Any]] = []
-        entitySections.append(moreDataArray);
-        self.convertToApiDataModel(entitiesApiData:entitySections)
-        if (self.apiDataModelSections.count) > 0 {
-            entitiesData((self.apiDataModelSections),SBErrorType.ConnectError)
-        }
+    public func handleEmptyData(_ entitiesData: (([Any], SBErrorType) -> Void)!) {
+        //let emptyDict = [["prefixCell":"WSEmpty","prefixModel":"WSEmpty","content":"no_information"]]
+        //let moreDataArray:[WSEmptyModel] = Mapper<WSEmptyModel>().mapArray(JSONArray: (emptyDict) as Array)
+        //var entitySections: [[Any]] = []
+        //entitySections.append(moreDataArray);
+        //self.convertToApiDataModel(entitiesApiData:entitySections)
+        //if (self.apiDataModelSections.count) > 0 {
+        //    entitiesData((entitySections), SBErrorType.ConnectNoData)
+        //}
+        entitiesData(([]), SBErrorType.ConnectNoData)
     }
     
-    open func fetchCacheData(_ entitiesData: (([Any],SBErrorType) -> Void)!) {
+    open func fetchCacheData(_ entitiesData: (([Any], SBErrorType) -> Void)!) {
         self.baseDataManagerDelegate?.loadApiCacheData({  [weak self] entitiesApiData,error in
             print("")
             if (entitiesApiData is [WSApiDataModel]) == false {
                 self?.convertToApiDataModel(entitiesApiData:entitiesApiData)
-                if (self?.apiDataModelSections.count)! > 0 {entitiesData((self?.apiDataModelSections)!,SBErrorType.ConnectError)
+                if (self?.apiDataModelSections.count)! > 0 {entitiesData((self?.apiDataModelSections)!, SBErrorType.ConnectError)
                 }
                 else {
                     self?.baseDataManagerDelegate?.handleEmptyData(entitiesData)
@@ -54,12 +55,12 @@ open class WSDataManagerBase : NSObject , WSDataManagerDelegateBase {
                 return
             }
             if entitiesApiData.count > 0 {
-                entitiesData((entitiesApiData),SBErrorType.ConnectError)
+                entitiesData((entitiesApiData), SBErrorType.ConnectError)
             }
             else {
                 self?.baseDataManagerDelegate?.handleEmptyData(entitiesData)
             }
-        });
+        })
     }
     
     open func fetchData(_ entitiesData: (([Any],SBErrorType) -> Void)!, _ parameter:Any? = nil) {
@@ -70,7 +71,7 @@ open class WSDataManagerBase : NSObject , WSDataManagerDelegateBase {
             if (entitiesApiData is [WSApiDataModel]) == false {
                 self?.convertToApiDataModel(entitiesApiData:entitiesApiData)
                 if (self?.apiDataModelSections.count)! > 0 {
-                    entitiesData((self?.apiDataModelSections)!,SBErrorType.ConnectError)
+                    entitiesData((self?.apiDataModelSections)!, SBErrorType.ConnectError)
                 }
                 else {
                     self?.baseDataManagerDelegate?.handleEmptyData(entitiesData)
@@ -81,7 +82,7 @@ open class WSDataManagerBase : NSObject , WSDataManagerDelegateBase {
                 for apiDataModel in entitiesApiData {
                     self?.apiDataModelSections.append(apiDataModel as! WSApiDataModel)
                 }
-                entitiesData(((self?.apiDataModelSections)!),SBErrorType.ConnectError)
+                entitiesData(((self?.apiDataModelSections)!), SBErrorType.ConnectError)
                 
 //                let apiDataModel:WSApiDataModel = entitiesApiData[0] as! WSApiDataModel
 //                self?.apiDataModelSections.append(apiDataModel)
@@ -90,10 +91,10 @@ open class WSDataManagerBase : NSObject , WSDataManagerDelegateBase {
             else {
                 self?.baseDataManagerDelegate?.handleEmptyData(entitiesData)
             }
-        }, parameter);
+        }, parameter)
     }
     
-    open func fetchMoreData(_ entitiesData: (([Any],[Any],SBErrorType) -> Void)!, _ parameter:Any? = nil) {
+    open func fetchMoreData(_ entitiesData: (([Any],[Any], SBErrorType) -> Void)!, _ parameter:Any? = nil) {
         self.baseDataManagerDelegate?.loadApiRequestsMoreData({ [weak self] entitiesApiData,error in
             var body:[Any]? = []
             if (entitiesApiData.count > 0) && ((entitiesApiData[0] as! WSApiDataModel).body?.count ?? 0) > 0 {
@@ -103,7 +104,7 @@ open class WSDataManagerBase : NSObject , WSDataManagerDelegateBase {
                 self?.page += 1
             }
             entitiesData((self?.apiDataModelSections)!, body!,SBErrorType.ConnectError)
-        }, parameter);
+        }, parameter)
     }
     
     // MARK: Private method

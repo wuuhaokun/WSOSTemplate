@@ -5,7 +5,7 @@
 //  Created by Apple on 2019/4/24.
 //  Copyright © 2019 Apple. All rights reserved.
 //
-
+/*
 import UIKit
 import GoogleSignIn
 
@@ -64,3 +64,4 @@ class WSGoogleSignIn:NSObject, GIDSignInUIDelegate, GIDSignInDelegate {
     }
     
 }
+*/

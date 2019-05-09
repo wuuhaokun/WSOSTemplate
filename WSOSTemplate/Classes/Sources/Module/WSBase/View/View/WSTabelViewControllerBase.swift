@@ -3,7 +3,7 @@
 //  shareba_business
 //
 //  Created by 吳招坤 on 2018/7/2.
-//  Copyright © 2018年 TSAI CHENG HENG. All rights reserved.
+//  Copyright © 2018年 WU CHAO KUN All rights reserved.
 //
 
 import UIKit
@@ -33,8 +33,8 @@ open class WSTabelViewControllerBase : WSViewControllerBase , UITableViewDelegat
                 self?.tableView.reloadData() {
                 }
             }
+          
         })
-        
     }
     
     // Enable the navbar scrolling
@@ -74,6 +74,12 @@ open class WSTabelViewControllerBase : WSViewControllerBase , UITableViewDelegat
         tableView.allowsSelection = true
         tableView.allowsMultipleSelection = false
         self.view.addSubview(tableView)
+        self.tableView.addSubview(nodataInfoLabel)
+        nodataInfoLabel.snp.makeConstraints { make in
+            make.top.equalTo(self.tableView).offset(16)
+            make.width.equalTo(self.tableView)
+            make.height.equalTo(21)
+        }
     }
     
     //下拉刷新相关设置
@@ -89,7 +95,6 @@ open class WSTabelViewControllerBase : WSViewControllerBase , UITableViewDelegat
     
     // 底部加载
     func setupRefreshFooter() {
-
         let footer = MJRefreshAutoNormalFooter()
         //隐藏状态
         footer.stateLabel.isHidden = true
@@ -101,7 +106,6 @@ open class WSTabelViewControllerBase : WSViewControllerBase , UITableViewDelegat
         //是否自动加载（默认为true，即表格滑到底部就自动加载）
         footer.isAutomaticallyRefresh = false
         tableView.mj_footer = footer
-        
     }
     
     override func setBaseNavigationItem() {
@@ -114,7 +118,7 @@ open class WSTabelViewControllerBase : WSViewControllerBase , UITableViewDelegat
     }
     
     // MARK: WSViewControlBaseDelegate
-    open func registerBaseCellClass() {
+    func registerBaseCellClass() {
         tableView.register(WSEmptyCell.self, forCellReuseIdentifier: "WSEmptyCell")
         tableView.register(WSSectionCell.self, forCellReuseIdentifier: "WSSectionCell")
     }
@@ -122,7 +126,6 @@ open class WSTabelViewControllerBase : WSViewControllerBase , UITableViewDelegat
     // MARK: MJRefresh action
     //顶部下拉刷新
     @objc func headerRefresh(){
-        
         let task = WSDispatchDelay().delay(5) {
             self.tableView.mj_header.endRefreshing()
         }
@@ -157,7 +160,7 @@ open class WSTabelViewControllerBase : WSViewControllerBase , UITableViewDelegat
                 self?.tableView.mj_footer.endRefreshing()
                 WSDispatchDelay().cancel(task)
             })
-        });
+        })
     }
     
     // MARK: NotificationName action
@@ -178,6 +181,7 @@ open class WSTabelViewControllerBase : WSViewControllerBase , UITableViewDelegat
         if entitySectionsArray.count <= 0 {
             return 0
         }
+        self.nodataInfoLabel.isHidden = true
         return entitySectionsArray.count
     }
     
@@ -225,7 +229,6 @@ open class WSTabelViewControllerBase : WSViewControllerBase , UITableViewDelegat
     }
     
     open func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-
         let cellReuseIdentifier = WSBaseShareFunction.cellReuseIdentifier(entitySections: entitySectionsArray,indexPath: indexPath)
         let selectedText:String = "No cache"
         switch selectedText {

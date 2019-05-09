@@ -5,7 +5,7 @@
 //  Created by Apple on 2019/4/22.
 //  Copyright © 2019 Apple. All rights reserved.
 //
-
+/*
 import UIKit
 import Firebase
 import GoogleSignIn
@@ -194,4 +194,4 @@ extension WSAppDelegate: MessagingDelegate{
     }
     
 }
-
+*/

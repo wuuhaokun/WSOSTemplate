@@ -3,7 +3,7 @@
 //  shareba_business
 //
 //  Created by 吳招坤 on 2018/7/20.
-//  Copyright © 2018年 TSAI CHENG HENG. All rights reserved.
+//  Copyright © 2018年 WU CHAO KUN All rights reserved.
 //
 
 import UIKit
@@ -14,7 +14,6 @@ open class WSScanBaseViewController: WSViewControllerBase , LBXScanViewControlle
     
     open override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
     }
     

@@ -3,7 +3,7 @@
 //  shareba_business
 //
 //  Created by 吳招坤 on 2018/7/2.
-//  Copyright © 2018年 TSAI CHENG HENG. All rights reserved.
+//  Copyright © 2018年 WU CHAO KUN All rights reserved.
 //
 
 import UIKit
@@ -13,6 +13,15 @@ import Toast_Swift
 
 open class WSViewControllerBase : ScrollingNavigationViewController , WSViewInterfaceBase {
 
+    open lazy var nodataInfoLabel: UILabel = {
+        let nodataInfoLabel = UILabel()
+        nodataInfoLabel.font = UIFont.boldSystemFont(ofSize: 18)
+        nodataInfoLabel.textAlignment = .center
+        nodataInfoLabel.text = WSlocalizedString.string(key: "There is no information")
+        //self.view.addSubview(nodataInfoLabel)
+        return nodataInfoLabel
+    }()
+    
     public var baseViewControllerDelegate: WSViewControlBaseDelegate?
     public var entitySectionsArray: [Any] = []
     public var eventHandler : WSPresenterInterfaceBase?
@@ -53,6 +62,12 @@ open class WSViewControllerBase : ScrollingNavigationViewController , WSViewInte
     
     // MARK: Private method(自己新加的功能)
     func setupBaseUI() {
+        self.nodataInfoLabel.isHidden = true
+        //nodataInfoLabel.snp.makeConstraints { make in
+        //    make.top.equalTo(self.view).offset(16)
+        //    make.width.equalTo(self.view)
+        //    make.height.equalTo(21)
+        //}
     }
     
     func setBaseNavigationItem() {
@@ -73,7 +88,6 @@ open class WSViewControllerBase : ScrollingNavigationViewController , WSViewInte
         NotificationCenter
             .default
             .addObserver(self,selector:#selector(refreshDataAndView(notification:)),name: WSFRESH_DATA_AND_VIEW_NOTIFICATION, object: nil)
-        
     }
     
     open func unregisterNotification() {
@@ -94,7 +108,7 @@ open class WSViewControllerBase : ScrollingNavigationViewController , WSViewInte
                 //DispatchQueue.main.async {
                     then()
                 //}
-            });
+            })
         //}
     }
     
@@ -103,8 +117,12 @@ open class WSViewControllerBase : ScrollingNavigationViewController , WSViewInte
         self.fetchData({  [weak self] entitiesApiData,error in
             self?.entitySectionsArray.removeAll()
             self?.entitySectionsArray = entitiesApiData as! [WSApiDataModel]
+            if self?.entitySectionsArray.count ?? 0 <= 0 {
+                print("")
+                self?.nodataInfoLabel.isHidden = false
+            }
             finished()
-        });
+        })
         
 //        if self is WSTabelViewControllerBase {
 //            self.showHud(superView:(self as! WSTabelViewControllerBase).tableView)
@@ -179,6 +197,7 @@ open class WSViewControllerBase : ScrollingNavigationViewController , WSViewInte
     open func viewFinishedRefreshData(notification: Notification) {
         //給予子類別決定是否實作
     }
+    
 }
 
 extension UIViewController {
@@ -259,7 +278,7 @@ extension UIViewController {
         superController.present(alert, animated: true, completion: nil)
     }
     
-    public func showHud(_ message:String = "", superView:UIView? = nil, afterDelay: Int = 180) {
+    public func showHud(_ message:String = "", superView:UIView? = nil, afterDelay: Int = 30, isUserInteractionEnabled:Bool = true) {
         var hud :MBProgressHUD? = nil
         if superView == nil {
             hud = MBProgressHUD.showAdded(to: self.view, animated: true)
@@ -272,7 +291,7 @@ extension UIViewController {
         }
         hud!.bezelView.backgroundColor =  UIColor.clear
         hud!.label.text = message
-        hud!.isUserInteractionEnabled = false
+        hud!.isUserInteractionEnabled = isUserInteractionEnabled
         hud!.hide(animated: true, afterDelay: TimeInterval(afterDelay))
     }
     
@@ -287,24 +306,5 @@ extension UIViewController {
     func showNoNetworkToast() {
         self.view.makeToast(WSNetworkUtils.sharedInstance.noNetworkMessage, duration: 3.0, position: .bottom)
     }
-}
-
-extension UIColor {
-    convenience public init(hexString: String) {
-        let hex = hexString.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
-        var int = UInt32()
-        Scanner(string: hex).scanHexInt32(&int)
-        let a, r, g, b: UInt32
-        switch hex.count {
-        case 3: // RGB (12-bit)
-            (a, r, g, b) = (255, (int >> 8) * 17, (int >> 4 & 0xF) * 17, (int & 0xF) * 17)
-        case 6: // RGB (24-bit)
-            (a, r, g, b) = (255, int >> 16, int >> 8 & 0xFF, int & 0xFF)
-        case 8: // ARGB (32-bit)
-            (a, r, g, b) = (int >> 24, int >> 16 & 0xFF, int >> 8 & 0xFF, int & 0xFF)
-        default:
-            (a, r, g, b) = (255, 0, 0, 0)
-        }
-        self.init(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: CGFloat(a) / 255)
-    }
+    
 }

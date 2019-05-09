@@ -5,7 +5,7 @@
 //  Created by Apple on 2019/4/26.
 //  Copyright © 2019 Apple. All rights reserved.
 //
-
+/*
 import UIKit
 import LineSDK
 
@@ -44,3 +44,4 @@ class WSLineSignIn:NSObject {
     }
     
 }
+*/

@@ -5,7 +5,7 @@
 //  Created by Apple on 2019/4/29.
 //  Copyright © 2019 Apple. All rights reserved.
 //
-
+/*
 import UIKit
 import Firebase
 import FBSDKCoreKit
@@ -63,3 +63,4 @@ class WSFBSignIn: NSObject {
     }
     
 }
+*/
