@@ -19,12 +19,13 @@ open class WSViewControllerBase : ScrollingNavigationViewController , WSViewInte
         nodataInfoLabel.textAlignment = .center
         nodataInfoLabel.text = WSlocalizedString.string(key: "There is no information")
         //self.view.addSubview(nodataInfoLabel)
+        nodataInfoLabel.isHidden = true
         return nodataInfoLabel
     }()
     
-    public var baseViewControllerDelegate: WSViewControlBaseDelegate?
-    public var entitySectionsArray: [Any] = []
-    public var eventHandler : WSPresenterInterfaceBase?
+    open var baseViewControllerDelegate: WSViewControlBaseDelegate?
+    open var entitySectionsArray: [Any] = []
+    open var eventHandler : WSPresenterInterfaceBase?
     open var param : Any?
     open weak var WSParent:UIViewController? = nil
     //public var noNetworkMessage:String = "No network!!"
@@ -70,7 +71,7 @@ open class WSViewControllerBase : ScrollingNavigationViewController , WSViewInte
         //}
     }
     
-    func setBaseNavigationItem() {
+    open func setBaseNavigationItem() {
     }
     
     open func registerNotification() {

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WSCollectionBaseCell: UICollectionViewCell {
+open class WSCollectionBaseCell: UICollectionViewCell {
     
     open var entity: Any?
     

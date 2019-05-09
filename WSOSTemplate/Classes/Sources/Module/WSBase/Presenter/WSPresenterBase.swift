@@ -11,9 +11,9 @@ import UIKit
 
 open class WSPresenterBase : NSObject, WSInteractorOutputBase, WSPresenterInterfaceBase {
     
-    public var interactor : WSInteractorInputBase?
-    public var wireframe : WSWireframeBase?
-    public var userInterface : WSViewInterfaceBase?
+    open var interactor : WSInteractorInputBase?
+    open var wireframe : WSWireframeBase?
+    open var userInterface : WSViewInterfaceBase?
     
     override required public init() {
         print("init")

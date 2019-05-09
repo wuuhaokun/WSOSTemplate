@@ -11,12 +11,12 @@ import MJRefresh
 
 private let reuseIdentifier = "Cell"
 
-class WSCollectionViewControllerBase: WSViewControllerBase, UICollectionViewDataSource, UICollectionViewDelegate /*UICollectionViewController*/ {
+open class WSCollectionViewControllerBase: WSViewControllerBase, UICollectionViewDataSource, UICollectionViewDelegate /*UICollectionViewController*/ {
     
     public var collectionView: UICollectionView!
     public var collectionViewLayout:UICollectionViewFlowLayout!
     
-    override func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
@@ -131,7 +131,7 @@ class WSCollectionViewControllerBase: WSViewControllerBase, UICollectionViewData
         collectionView.mj_footer = footer
     }
     
-    override func setBaseNavigationItem() {
+    open override func setBaseNavigationItem() {
         // 導覽列標題
         navigationItem.title = ""
         // 導覽列底色
@@ -141,7 +141,7 @@ class WSCollectionViewControllerBase: WSViewControllerBase, UICollectionViewData
     }
     
     // MARK: WSViewControlBaseDelegate
-    func registerBaseCellClass() {
+    open func registerBaseCellClass() {
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         // 註冊 section 的 header 跟 footer 以供後續重複使用
 //        myCollectionView.registerClass(
@@ -221,7 +221,7 @@ class WSCollectionViewControllerBase: WSViewControllerBase, UICollectionViewData
 
     // MARK: UICollectionViewDataSource
 
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
+    private func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         if entitySectionsArray.count <= 0 {
             return 0
@@ -231,7 +231,7 @@ class WSCollectionViewControllerBase: WSViewControllerBase, UICollectionViewData
     }
 
 
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
         if entitySectionsArray.count <= section {
             return 0
@@ -247,7 +247,7 @@ class WSCollectionViewControllerBase: WSViewControllerBase, UICollectionViewData
         }
     }
 
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cellReuseIdentifier = WSBaseShareFunction.cellReuseIdentifier(entitySections: entitySectionsArray,indexPath: indexPath)
         //這里的寫法有問題，之後要修正的self.collectionView？
         let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier, for: indexPath)

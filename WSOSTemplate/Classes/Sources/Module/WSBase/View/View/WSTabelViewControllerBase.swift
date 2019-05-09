@@ -108,7 +108,7 @@ open class WSTabelViewControllerBase : WSViewControllerBase , UITableViewDelegat
         tableView.mj_footer = footer
     }
     
-    override func setBaseNavigationItem() {
+    override open func setBaseNavigationItem() {
         // 導覽列標題
         navigationItem.title = ""
         // 導覽列底色
@@ -118,7 +118,7 @@ open class WSTabelViewControllerBase : WSViewControllerBase , UITableViewDelegat
     }
     
     // MARK: WSViewControlBaseDelegate
-    func registerBaseCellClass() {
+    open func registerBaseCellClass() {
         tableView.register(WSEmptyCell.self, forCellReuseIdentifier: "WSEmptyCell")
         tableView.register(WSSectionCell.self, forCellReuseIdentifier: "WSSectionCell")
     }

@@ -36,7 +36,7 @@ public struct WSColor {
 }
 
 extension WSColor {
-    static func randomColor() -> UIColor {
+    static public func randomColor() -> UIColor {
         
         let hue = CGFloat(arc4random() % 100) / 100
         let saturation = CGFloat(arc4random() % 100) / 100
