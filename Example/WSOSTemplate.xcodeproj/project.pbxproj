@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		22B417B87C652E19915F9CBB /* Pods_WSOSTemplate_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 818C2FD5337DAC96990BB985 /* Pods_WSOSTemplate_Example.framework */; };
+		296B31ADEF6E3F3E0229BDF7 /* Pods_WSOSTemplate_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D758B0BB7613670DF3AA087F /* Pods_WSOSTemplate_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
-		6FEB8D07277F4194EC277CB5 /* Pods_WSOSTemplate_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9206ACB59CF6F0A4B9EB474C /* Pods_WSOSTemplate_Tests.framework */; };
+		8FBB3F8E6757939632ED4F85 /* Pods_WSOSTemplate_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D81F49E14A8BDDEE02167E6 /* Pods_WSOSTemplate_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,9 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		14A9E3E57B420F0DFFFBC659 /* WSOSTemplate.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = WSOSTemplate.podspec; path = ../WSOSTemplate.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		18F31321698B424178915C57 /* Pods-WSOSTemplate_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WSOSTemplate_Tests.release.xcconfig"; path = "Target Support Files/Pods-WSOSTemplate_Tests/Pods-WSOSTemplate_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		56BE4C0982480EA4D5BA448D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		1D81F49E14A8BDDEE02167E6 /* Pods_WSOSTemplate_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WSOSTemplate_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C765495ACCB23F3B4EB2529 /* Pods-WSOSTemplate_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WSOSTemplate_Tests.release.xcconfig"; path = "Target Support Files/Pods-WSOSTemplate_Tests/Pods-WSOSTemplate_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* WSOSTemplate_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WSOSTemplate_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,12 +40,13 @@
 		607FACE51AFB9204008FA782 /* WSOSTemplate_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WSOSTemplate_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		7D19931406CDBE5ADAA5F2E2 /* Pods-WSOSTemplate_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WSOSTemplate_Example.debug.xcconfig"; path = "Target Support Files/Pods-WSOSTemplate_Example/Pods-WSOSTemplate_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		8154F0906BD3BB76D7B95C6D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		815BBF4F993E7535A5DB6179 /* Pods-WSOSTemplate_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WSOSTemplate_Tests.debug.xcconfig"; path = "Target Support Files/Pods-WSOSTemplate_Tests/Pods-WSOSTemplate_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		818C2FD5337DAC96990BB985 /* Pods_WSOSTemplate_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WSOSTemplate_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9206ACB59CF6F0A4B9EB474C /* Pods_WSOSTemplate_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WSOSTemplate_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B99C46742D9AD287AEE978D1 /* Pods-WSOSTemplate_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WSOSTemplate_Example.release.xcconfig"; path = "Target Support Files/Pods-WSOSTemplate_Example/Pods-WSOSTemplate_Example.release.xcconfig"; sourceTree = "<group>"; };
+		74D36B2A7322819994A81016 /* Pods-WSOSTemplate_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WSOSTemplate_Example.debug.xcconfig"; path = "Target Support Files/Pods-WSOSTemplate_Example/Pods-WSOSTemplate_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		A2A6B34B047DDBE2F0F01A1A /* WSOSTemplate.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = WSOSTemplate.podspec; path = ../WSOSTemplate.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		D758B0BB7613670DF3AA087F /* Pods_WSOSTemplate_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WSOSTemplate_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8D010DFAF5DBB9CA4B55D22 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		E4A74DD640013E8662E3CCA2 /* Pods-WSOSTemplate_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WSOSTemplate_Example.release.xcconfig"; path = "Target Support Files/Pods-WSOSTemplate_Example/Pods-WSOSTemplate_Example.release.xcconfig"; sourceTree = "<group>"; };
+		E4FC75DFA566716384156B62 /* Pods-WSOSTemplate_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WSOSTemplate_Tests.debug.xcconfig"; path = "Target Support Files/Pods-WSOSTemplate_Tests/Pods-WSOSTemplate_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		F5B24E668B0652D67430CC21 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22B417B87C652E19915F9CBB /* Pods_WSOSTemplate_Example.framework in Frameworks */,
+				8FBB3F8E6757939632ED4F85 /* Pods_WSOSTemplate_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,24 +62,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FEB8D07277F4194EC277CB5 /* Pods_WSOSTemplate_Tests.framework in Frameworks */,
+				296B31ADEF6E3F3E0229BDF7 /* Pods_WSOSTemplate_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		128A04650745C5319407D445 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				7D19931406CDBE5ADAA5F2E2 /* Pods-WSOSTemplate_Example.debug.xcconfig */,
-				B99C46742D9AD287AEE978D1 /* Pods-WSOSTemplate_Example.release.xcconfig */,
-				815BBF4F993E7535A5DB6179 /* Pods-WSOSTemplate_Tests.debug.xcconfig */,
-				18F31321698B424178915C57 /* Pods-WSOSTemplate_Tests.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -87,8 +76,8 @@
 				607FACD21AFB9204008FA782 /* Example for WSOSTemplate */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
-				128A04650745C5319407D445 /* Pods */,
-				A43F15C13BC260662FB736AE /* Frameworks */,
+				673AA6244C3EAB6A83A6EF36 /* Pods */,
+				7F88AE499A322F97CEA47241 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,18 +132,29 @@
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				14A9E3E57B420F0DFFFBC659 /* WSOSTemplate.podspec */,
-				8154F0906BD3BB76D7B95C6D /* README.md */,
-				56BE4C0982480EA4D5BA448D /* LICENSE */,
+				A2A6B34B047DDBE2F0F01A1A /* WSOSTemplate.podspec */,
+				F5B24E668B0652D67430CC21 /* README.md */,
+				D8D010DFAF5DBB9CA4B55D22 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		A43F15C13BC260662FB736AE /* Frameworks */ = {
+		673AA6244C3EAB6A83A6EF36 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				818C2FD5337DAC96990BB985 /* Pods_WSOSTemplate_Example.framework */,
-				9206ACB59CF6F0A4B9EB474C /* Pods_WSOSTemplate_Tests.framework */,
+				74D36B2A7322819994A81016 /* Pods-WSOSTemplate_Example.debug.xcconfig */,
+				E4A74DD640013E8662E3CCA2 /* Pods-WSOSTemplate_Example.release.xcconfig */,
+				E4FC75DFA566716384156B62 /* Pods-WSOSTemplate_Tests.debug.xcconfig */,
+				3C765495ACCB23F3B4EB2529 /* Pods-WSOSTemplate_Tests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7F88AE499A322F97CEA47241 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D81F49E14A8BDDEE02167E6 /* Pods_WSOSTemplate_Example.framework */,
+				D758B0BB7613670DF3AA087F /* Pods_WSOSTemplate_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -166,11 +166,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "WSOSTemplate_Example" */;
 			buildPhases = (
-				8D503CDB6D13766164044D88 /* [CP] Check Pods Manifest.lock */,
+				36335CC428B46923FBE0265D /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				FDFD156A30381C4A5FE9F7BD /* [CP] Embed Pods Frameworks */,
+				7CF4323FCB8FDE6194E39BD0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -185,7 +185,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "WSOSTemplate_Tests" */;
 			buildPhases = (
-				4EA44CCDCCBE4A4F9647A1C6 /* [CP] Check Pods Manifest.lock */,
+				F8A497C181304E5B5B188A68 /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
@@ -212,7 +212,6 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = K468347W45;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
@@ -263,29 +262,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4EA44CCDCCBE4A4F9647A1C6 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WSOSTemplate_Tests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8D503CDB6D13766164044D88 /* [CP] Check Pods Manifest.lock */ = {
+		36335CC428B46923FBE0265D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -307,22 +284,48 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FDFD156A30381C4A5FE9F7BD /* [CP] Embed Pods Frameworks */ = {
+		7CF4323FCB8FDE6194E39BD0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-WSOSTemplate_Example/Pods-WSOSTemplate_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/WSOSTemplate/WSOSTemplate.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WSOSTemplate.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WSOSTemplate_Example/Pods-WSOSTemplate_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8A497C181304E5B5B188A68 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WSOSTemplate_Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -420,7 +423,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -466,7 +469,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -476,12 +479,10 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7D19931406CDBE5ADAA5F2E2 /* Pods-WSOSTemplate_Example.debug.xcconfig */;
+			baseConfigurationReference = 74D36B2A7322819994A81016 /* Pods-WSOSTemplate_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = K468347W45;
 				INFOPLIST_FILE = WSOSTemplate/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -493,12 +494,10 @@
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B99C46742D9AD287AEE978D1 /* Pods-WSOSTemplate_Example.release.xcconfig */;
+			baseConfigurationReference = E4A74DD640013E8662E3CCA2 /* Pods-WSOSTemplate_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = K468347W45;
 				INFOPLIST_FILE = WSOSTemplate/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -510,7 +509,7 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 815BBF4F993E7535A5DB6179 /* Pods-WSOSTemplate_Tests.debug.xcconfig */;
+			baseConfigurationReference = E4FC75DFA566716384156B62 /* Pods-WSOSTemplate_Tests.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -532,7 +531,7 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 18F31321698B424178915C57 /* Pods-WSOSTemplate_Tests.release.xcconfig */;
+			baseConfigurationReference = 3C765495ACCB23F3B4EB2529 /* Pods-WSOSTemplate_Tests.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

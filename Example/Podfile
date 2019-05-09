@@ -1,5 +1,5 @@
 use_frameworks!
-platform :ios, '10.0'
+
 target 'WSOSTemplate_Example' do
   pod 'WSOSTemplate', :path => '../'
 

@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  WSOSTemplate
 //
-//  Created by wuuhaokun on 04/23/2019.
-//  Copyright (c) 2019 wuuhaokun. All rights reserved.
+//  Created by chao-kun.wu on 05/09/2019.
+//  Copyright (c) 2019 chao-kun.wu. All rights reserved.
 //
 
 import UIKit

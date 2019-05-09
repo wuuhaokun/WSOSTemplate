@@ -1,0 +1,22 @@
+{
+  "name": "WSOSTemplate",
+  "version": "0.1.0",
+  "summary": "A short description of WSOSTemplate.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/chao-kun.wu/WSOSTemplate",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "chao-kun.wu": "w.sirius@gamil.com"
+  },
+  "source": {
+    "git": "https://github.com/chao-kun.wu/WSOSTemplate.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "WSOSTemplate/Classes/**/*"
+}

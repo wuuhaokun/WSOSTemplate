@@ -1,0 +1,16 @@
+PODS:
+  - WSOSTemplate (0.1.0)
+
+DEPENDENCIES:
+  - WSOSTemplate (from `../`)
+
+EXTERNAL SOURCES:
+  WSOSTemplate:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  WSOSTemplate: 509b17c642ed4f89fd55d2be00081cce2989c6bd
+
+PODFILE CHECKSUM: 95e703deea9bd4ffbe221553a7da68419077623a
+
+COCOAPODS: 1.6.1

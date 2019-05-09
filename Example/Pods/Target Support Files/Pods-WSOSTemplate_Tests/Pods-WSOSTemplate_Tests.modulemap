@@ -1,0 +1,6 @@
+framework module Pods_WSOSTemplate_Tests {
+  umbrella header "Pods-WSOSTemplate_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

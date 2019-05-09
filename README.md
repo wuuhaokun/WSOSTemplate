@@ -1,6 +1,6 @@
 # WSOSTemplate
 
-[![CI Status](https://img.shields.io/travis/wuuhaokun/WSOSTemplate.svg?style=flat)](https://travis-ci.org/wuuhaokun/WSOSTemplate)
+[![CI Status](https://img.shields.io/travis/chao-kun.wu/WSOSTemplate.svg?style=flat)](https://travis-ci.org/chao-kun.wu/WSOSTemplate)
 [![Version](https://img.shields.io/cocoapods/v/WSOSTemplate.svg?style=flat)](https://cocoapods.org/pods/WSOSTemplate)
 [![License](https://img.shields.io/cocoapods/l/WSOSTemplate.svg?style=flat)](https://cocoapods.org/pods/WSOSTemplate)
 [![Platform](https://img.shields.io/cocoapods/p/WSOSTemplate.svg?style=flat)](https://cocoapods.org/pods/WSOSTemplate)
@@ -22,7 +22,7 @@ pod 'WSOSTemplate'
 
 ## Author
 
-wuuhaokun, w.sirius@gmail.com
+chao-kun.wu, w.sirius@gamil.com
 
 ## License
 
