@@ -64,7 +64,7 @@ open class WSRequestsDataHandler {
         
     }
     //將資料轉為傳入Model Array的格式回傳
-    open static func ObjectMapperArraySerializer<T: BaseMappable>(_ WSResponseConfigure:WSResponseConfigure<T>, _ context: MapContext? = nil,json:String) -> [T]? {
+    public static func ObjectMapperArraySerializer<T: BaseMappable>(_ WSResponseConfigure:WSResponseConfigure<T>, _ context: MapContext? = nil,json:String) -> [T]? {
         
         if let parsedObject = Mapper<T>(context:context,shouldIncludeNilValues: false).mapArray(JSONString: json) {
             return parsedObject

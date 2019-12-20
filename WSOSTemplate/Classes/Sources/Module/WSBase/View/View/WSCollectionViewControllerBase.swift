@@ -221,7 +221,7 @@ open class WSCollectionViewControllerBase: WSViewControllerBase, UICollectionVie
 
     // MARK: UICollectionViewDataSource
 
-    private func numberOfSections(in collectionView: UICollectionView) -> Int {
+    open func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         if entitySectionsArray.count <= 0 {
             return 0
@@ -231,7 +231,7 @@ open class WSCollectionViewControllerBase: WSViewControllerBase, UICollectionVie
     }
 
 
-    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    open func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
         if entitySectionsArray.count <= section {
             return 0
@@ -247,7 +247,7 @@ open class WSCollectionViewControllerBase: WSViewControllerBase, UICollectionVie
         }
     }
 
-    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    open func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cellReuseIdentifier = WSBaseShareFunction.cellReuseIdentifier(entitySections: entitySectionsArray,indexPath: indexPath)
         //這里的寫法有問題，之後要修正的self.collectionView？
         let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier, for: indexPath)
